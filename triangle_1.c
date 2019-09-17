@@ -1,3 +1,13 @@
+/*
+input: 0 <= n <= 100
+
+output:
+*
+**
+***
+...
+*/
+
 #include <stdio.h>
 
 int main() {
@@ -7,7 +17,7 @@ int main() {
   int idx = 1;
   while(n != 0) {
     for (int i = 0; i < idx; i++) {
-      printf("*");
+      printf("*");  
     }
     printf("\n");
     idx++;
