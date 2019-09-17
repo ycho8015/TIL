@@ -40,7 +40,7 @@
 *.i*86
 *.x86_64
 *.hex
-
+*.exec
 # Debug files
 *.dSYM/
 *.su
@@ -73,6 +73,7 @@ dkms.conf
 # Compiled Static libraries
 *.lai
 
-# Executables
+# vscode
+*.vscode
 
 # End of https://www.gitignore.io/api/c,c++
