@@ -76,4 +76,7 @@ dkms.conf
 # vscode
 *.vscode
 
+*
+!*.c
+!Makefile
 # End of https://www.gitignore.io/api/c,c++
