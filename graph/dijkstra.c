@@ -15,7 +15,7 @@ int main() {
 
     int v, w, c;
     for (int i = 0; i < m; i++) {
-        scanf("%d %d %d", &v, &w, %c);
+        scanf("%d %d %d", &v, &w, &c);
         graph[v].push_back(w);
         graph[w].push_back(v);
         cost[v].push_back(c);
