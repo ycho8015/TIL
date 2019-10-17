@@ -99,13 +99,5 @@ int main() {
     } else {
         printf("%d", ans);
     }
-
-    // for (int i = 1; i <= n; i++) {
-    //     printf("%d: ", i);
-    //     for (int j = 0; j < v[i].size(); j++) {
-    //         printf("%d ", v[i][j]);
-    //     }
-    //     printf("\n");
-    // }
     return 0;
 }
