@@ -1,43 +1,22 @@
 #include <stdio.h>
-#include <limits.h>
-#include <stdbool.h>
+const int MAX = 100000;
+int data[MAX];
 
-#define MAX 100000
-
-int trees[MAX];
+int GCD(int a, int b) {
+    if (a % b) return GCD(b, a % b);
+    return b;
+}
 
 int main() {
-  int n;
-  scanf("%d", &n);
-  
-  int min = INT_MAX;
-  for (int i = 0; i < n; i++) {
-    scanf("%d", &trees[i]);
-    if (i > 0) {
-      if (trees[i] - trees[i - 1] < min) 
-        min = trees[i] - trees[i - 1];
-    }
-  }
-  
-  int num_trees = 0;
-  while (true) {
-    int flag = 0;
-    for (int i = 1; i < n; i++) {
-      if ((trees[i] - trees[i - 1]) % min != 0) {
-        flag = 1;
-        min--;
-        break;
-      }
+    int n;
+    scanf("%d", &n);
+    
+    int gcd = 0;
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &data[i]);
+        if (i) gcd = GCD(gcd, data[i] - data[i - 1]);
     }
     
-    if (flag == 0) {
-      for (int i = 1; i < n; i++) {
-        num_trees += (trees[i] - trees[i - 1]) / min - 1;
-      }
-      break;
-    }
-  }
-  
-  printf("%d", num_trees);
-  return 0;
+    printf("%d", (data[n - 1] - data[0]) / gcd + 1 - n);
+    return 0;
 }
