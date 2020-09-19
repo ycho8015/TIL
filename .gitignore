@@ -1,5 +1,12 @@
+# Ignore Everything
 *
-!/**/
-!*.*
-.vscode
-.DS_Store
+
+# But not .c .cpp
+
+!*.cpp
+!*.c
+
+# or directories
+!*/
+!.gitignore
+!README.md
