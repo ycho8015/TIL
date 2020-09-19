@@ -2,11 +2,15 @@
 *
 
 # But not .c .cpp
-
 !*.cpp
 !*.c
-
-# or directories
-!*/
+!*.ipynb
 !.gitignore
 !README.md
+
+# Or directories
+!*/
+
+# Ignore follow directories
+*/exams
+*/practice_problems
