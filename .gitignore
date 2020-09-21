@@ -11,6 +11,8 @@
 # Or directories
 !*/
 
+# Ignore following files
+*.ipynb_checkpoints
 # Ignore follow directories
 */exams
 */practice_problems
